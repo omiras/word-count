@@ -4,7 +4,7 @@
 
 Queremos implementar un contador de letras. El funcionamiento debe ser _parecido_ a esta otra [app](https://omiras.github.io/word-count-tool/)
 
-Los requisitos indetificados son
+Los requisitos identificados son
 
 1. Un usuario puede escribir una palabra en la caja de texto
 2. A medida que escribe o borra la palabra, el número de letras de dicha palabra se ve reflejado en el contenedor azul
