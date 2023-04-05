@@ -1,5 +1,20 @@
 # Hello World with React boilerplate
 
+## Implementar un contador de letras en React
+
+Queremos implementar un contador de letras. El funcionamiento debe ser _parecido_ a esta otra [app](https://omiras.github.io/word-count-tool/)
+
+Los requisitos indetificados son
+
+1. Un usuario puede escribir una palabra en la caja de texto
+2. A medida que escribe o borra la palabra, el número de letras de dicha palabra se ve reflejado en el contenedor azul
+3. Cuando al menos hay una letra en la caja de texto (input), debe mostrarse el botón verde.
+4. El botón verde debe añadir la palabra a una lista de palabras introducidas hasta el momento. En la versión sencilla, NO guardaremos el número de letras para cada palabra, a diferencia del ejemplo de app.
+
+**BONUS**: Juega con los estilos en línea para que, en la lista de palabras, cuanto más grande sea el tamaño de la palabra, más verde se vea. Es decir, una palabra de 5 letras apenas se verá verde, pero una palabra de 100 letras se verá visiblemente verde.
+
+## Boilerplate
+
 Start coding a react application
 
 > If you are working locally instead of using codespaces or gitpod, please follow [local installation steps](#local-installation-skip-if-you-are-working-on-codespaces-or-gitpod) and come back to this part of the readme.
