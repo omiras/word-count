@@ -5,7 +5,17 @@ export default function WordCount() {
   const [currentWord, setCurrentWord] = useState("");
 
   // el estado de las plabaras que he añadido hasta el momento
-  const [words, setWords] = useState([]);
+  const [words, setWords] = useState([]); // ['perro', 'gato']
+
+  // vamos a crear una función para gestionar el click. Lo que va a hacer, es recorrer todo el array de tareas, y filtrar aquella cuyo índice es el mismo sobre el que hemos click
+  const removeItem = (taskId) => { // handleClick
+    // filter
+    const newWords = words.filter( (w, index) => index !== taskId );
+
+    // Actualizo la variable de estado que contiene todas las palabras
+    setWords(newWords);
+
+  };
 
   return (
     <div className="container d-flex flex-column gap-4">
@@ -28,14 +38,25 @@ export default function WordCount() {
           // ...words va a hacer que usemos el operador de spread en el array actual. De manera, que vamos a recuperar todos los elementos del array y vamos a crear un array nuevo
           // como nuevo elmento, añadir el valor del input
           setWords([...words, currentWord]);
+
+          // borra el contenido del input
+          setCurrentWord('');
         }}
         className={`btn btn-success ${currentWord.length == 0 && "d-none"}`}
       >
         Add word to the list
       </button>
-      <ul class="list-group">
-        {words.map((w) => (
-          <li class="list-group-item">{w} - {w.length}</li>
+      <ul className="list-group">
+        {words.map((w, index) => (
+          <li onClick={(event)=> {
+            console.log(event.target);
+            // debemos eliminar el elemento identificado por el valor de 'index'
+            console.log('index elemento:' , index);
+
+            // invocamos a la función para eliminar la tarea
+            removeItem(index);
+
+          }} key={index} className="list-group-item">{w} - {w.length}</li>
         ))}
       </ul>
     </div>
